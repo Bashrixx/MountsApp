@@ -220,6 +220,8 @@ class AppCategoryList extends StatelessWidget {
 }
 
 class AppBottomBar extends StatefulWidget {
+  const AppBottomBar({super.key});
+
   @override
   AppBottomBarState createState() => AppBottomBarState();
 }
@@ -285,9 +287,9 @@ class AppBottomBarState extends State<AppBottomBar> {
               icon: Icon(currentBarItem.icon, color: Colors.grey),
               onPressed: () {
                 setState(() {
-                  barItems.forEach((AppBottomBarItem item) {
+                  for (var item in barItems) {
                     item.isSelected = item == currentBarItem;
-                  });
+                  }
                 });
               },
             );
@@ -302,6 +304,8 @@ class AppBottomBarState extends State<AppBottomBar> {
 
 class DetailsRatingBar extends StatelessWidget {
   var sampleRatingData = {'Rating': '4.6', 'Price': '\$12', 'Open': '24hrs'};
+
+  DetailsRatingBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -345,6 +349,8 @@ class DetailsRatingBar extends StatelessWidget {
 }
 
 class DetailsBottomActions extends StatelessWidget {
+  const DetailsBottomActions({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -6,7 +6,7 @@ class DetailsPage extends StatelessWidget {
 
   MountModel mount;
 
-  DetailsPage(this.mount);
+  DetailsPage(this.mount, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,7 @@ class DetailsPage extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                        child: Text("${selectedItem.description}", style: TextStyle(fontSize: 12))
+                        child: Text(selectedItem.description, style: TextStyle(fontSize: 12))
                       )
                     ],
                   )
