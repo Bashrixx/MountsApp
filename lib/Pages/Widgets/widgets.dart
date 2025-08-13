@@ -34,7 +34,7 @@ class AppHeader extends StatelessWidget {
               ),
               Text(
                 "Good morning",
-                style: TextStyle(color: mainColor, fontSize: 12),
+                style: TextStyle(color: constants.mainColor, fontSize: 12),
               ),
             ],
           ),
@@ -82,7 +82,7 @@ class AppSearch extends StatelessWidget {
                 height: 50,
                 margin: EdgeInsets.only(left: 10),
                 decoration: BoxDecoration(
-                  color: mainColor,
+                  color: constants.mainColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(Icons.tune, color: Colors.white),
@@ -172,7 +172,7 @@ class AppCategoryList extends StatelessWidget {
                 Text(
                   "See More",
                   style: TextStyle(
-                    color: mainColor,
+                    color: constants.mainColor,
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
@@ -202,7 +202,7 @@ class AppCategoryList extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(currentCategory.icon, color: mainColor),
+                      Icon(currentCategory.icon, color: constants.mainColor),
                       Text(
                         currentCategory.category,
                         style: TextStyle(
@@ -257,7 +257,7 @@ class AppBottomBarState extends State<AppBottomBar> {
               padding: EdgeInsets.only(left: 15, top: 5, bottom: 5, right: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: mainColor,
+                color: constants.mainColor,
               ),
               child: Row(
                 children: [
@@ -322,7 +322,7 @@ class DetailsRatingBar extends StatelessWidget {
                 Text(
                   sampleRatingData.entries.elementAt(index).value,
                   style: TextStyle(
-                    color: mainColor,
+                    color: constants.mainColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                   ),
@@ -348,7 +348,7 @@ class DetailsBottomActions extends StatelessWidget {
           Expanded(
             child: Material(
               borderRadius: BorderRadius.circular(15),
-              color: mainColor,
+              color: constants.mainColor,
               child: InkWell(
                 highlightColor: Colors.white.withOpacity(0.2),
                 splashColor: Colors.white.withOpacity(0.2),
@@ -370,9 +370,9 @@ class DetailsBottomActions extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
-              border: Border.all(color: mainColor, width: 2),
+              border: Border.all(color: constants.mainColor, width: 2),
             ),
-            child: Icon(Icons.turned_in_not, color: mainColor, size: 25),
+            child: Icon(Icons.turned_in_not, color: constants.mainColor, size: 25),
           ),
         ],
       ),
