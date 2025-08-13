@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mounts/Pages/Landing/landing.dart';
-
-final Color mainColor = Color(0xFFFF5656);
+import 'package:mounts/utility/constants.dart' as constants;
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -9,10 +8,12 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 4), () {
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MountsApp()));
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => MountsApp()));
     });
     return Container(
-      color: mainColor,
+      color: constants.mainColor,
       child: Stack(
         children: [
           Align(
@@ -33,4 +34,3 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
-

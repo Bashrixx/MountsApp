@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mounts/Pages/Splash/splash.dart';
-import 'package:mounts/Widgets/widgets.dart';
+import 'package:mounts/Pages/Widgets/widgets.dart';
+import 'package:mounts/utility/constants.dart' as constants;
 
 class MountsApp extends StatelessWidget {
   const MountsApp({super.key});
@@ -12,17 +12,17 @@ class MountsApp extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Center(
-          child: Icon(Icons.terrain, color: mainColor, size: 40,),
+          child: Icon(Icons.terrain, color: constants.mainColor, size: 40,),
         ),
         actions: [
           SizedBox(width: 40, height: 40)
         ],
-        iconTheme: IconThemeData(color: mainColor),
+        iconTheme: IconThemeData(color: constants.mainColor),
       ),
       drawer: Drawer(
         child: Container(
           padding: EdgeInsets.all(30),
-          color: mainColor,
+          color: constants.mainColor,
           alignment: Alignment.bottomLeft,
           child: Icon(Icons.terrain, color: Colors.white, size: 80),
         ),

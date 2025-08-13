@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:mounts/data/models/app_bottom_bar.dart';
+import 'package:mounts/data/models/category.dart';
+import 'package:mounts/data/models/mount.dart';
 
-class MountModel {
-  String path;
-  String name;
-  String location;
-  String description;
+final Color mainColor = Color(0xFFFF5656);
 
-  MountModel({
-    this.path = "",
-    this.name = "",
-    this.location = "",
-    this.description = "",
-  });
-}
+final List<CategoryModel> categories = [
+  CategoryModel(category: 'Mountain', icon: Icons.terrain),
+  CategoryModel(category: 'Forest', icon: Icons.park),
+  CategoryModel(category: 'Beach', icon: Icons.beach_access),
+  CategoryModel(category: 'Hiking', icon: Icons.directions_walk),
+];
+
+List<AppBottomBarItem> barItems = [
+  AppBottomBarItem(icon: Icons.home, label: 'Home', isSelected: true),
+  AppBottomBarItem(icon: Icons.explore, label: 'Explore', isSelected: false),
+  AppBottomBarItem(icon: Icons.turned_in_not, label: 'Tag', isSelected: false),
+  AppBottomBarItem(
+    icon: Icons.person_outline,
+    label: 'Profile',
+    isSelected: false,
+  ),
+];
 
 final List<MountModel> mountitems = [
   MountModel(
@@ -55,25 +64,3 @@ final List<MountModel> mountitems = [
     location: 'Hawaii',
   ),
 ];
-
-class CategoryModel {
-  String category;
-  IconData? icon;
-
-  CategoryModel({this.category = "", this.icon});
-}
-
-final List<CategoryModel> categories = [
-  CategoryModel(category: 'Mountain', icon: Icons.terrain),
-  CategoryModel(category: 'Forest', icon: Icons.park),
-  CategoryModel(category: 'Beach', icon: Icons.beach_access),
-  CategoryModel(category: 'Hiking', icon: Icons.directions_walk),
-];
-
-class AppBottomBarItem {
-  IconData? icon;
-  bool isSelected;
-  String label;
-
-  AppBottomBarItem({this.icon, this.label = '', this.isSelected = false});
-}

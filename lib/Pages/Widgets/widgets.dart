@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mounts/Pages/Details/details.dart';
 import 'package:mounts/Pages/Splash/splash.dart';
-import 'package:mounts/models/models.dart';
+import 'package:mounts/data/models/app_bottom_bar.dart';
+import 'package:mounts/data/models/category.dart';
+import 'package:mounts/data/models/mount.dart';
+import 'package:mounts/utility/constants.dart' as constants;
 
 class AppHeader extends StatelessWidget {
   const AppHeader({super.key});
@@ -96,12 +99,12 @@ class AppMountListView extends StatelessWidget {
   const AppMountListView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Expanded(
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: mountitems.length,
+        itemCount: constants.mountitems.length,
         itemBuilder: (context, index) {
-          MountModel currentMount = mountitems[index];
+          MountModel currentMount = constants.mountitems[index];
           return GestureDetector(
             onTap: () {
               Navigator.of(context).push(
@@ -151,7 +154,7 @@ class AppCategoryList extends StatelessWidget {
   const AppCategoryList({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Expanded(
       child: Column(
         children: [
           Container(
@@ -182,9 +185,9 @@ class AppCategoryList extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: categories.length,
+              itemCount: constants.categories.length,
               itemBuilder: (context, index) {
-                CategoryModel currentCategory = categories[index];
+                CategoryModel currentCategory = constants.categories[index];
                 return Container(
                   width: 100,
                   margin: EdgeInsets.only(top: 10, right: 10),
@@ -227,21 +230,6 @@ class AppBottomBar extends StatefulWidget {
 }
 
 class AppBottomBarState extends State<AppBottomBar> {
-  List<AppBottomBarItem> barItems = [
-    AppBottomBarItem(icon: Icons.home, label: 'Home', isSelected: true),
-    AppBottomBarItem(icon: Icons.explore, label: 'Explore', isSelected: false),
-    AppBottomBarItem(
-      icon: Icons.turned_in_not,
-      label: 'Tag',
-      isSelected: false,
-    ),
-    AppBottomBarItem(
-      icon: Icons.person_outline,
-      label: 'Profile',
-      isSelected: false,
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -259,8 +247,8 @@ class AppBottomBarState extends State<AppBottomBar> {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(barItems.length, (index) {
-          AppBottomBarItem currentBarItem = barItems[index];
+        children: List.generate(constants.barItems.length, (index) {
+          AppBottomBarItem currentBarItem = constants.barItems[index];
 
           Widget barItemWidget;
 
@@ -287,7 +275,7 @@ class AppBottomBarState extends State<AppBottomBar> {
               icon: Icon(currentBarItem.icon, color: Colors.grey),
               onPressed: () {
                 setState(() {
-                  for (var item in barItems) {
+                  for (var item in constants.barItems) {
                     item.isSelected = item == currentBarItem;
                   }
                 });

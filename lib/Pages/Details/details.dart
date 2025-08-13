@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mounts/Widgets/widgets.dart';
-import 'package:mounts/models/models.dart';
+import 'package:mounts/Pages/Widgets/widgets.dart';
+import 'package:mounts/data/models/mount.dart';
 
 class DetailsPage extends StatelessWidget {
 
