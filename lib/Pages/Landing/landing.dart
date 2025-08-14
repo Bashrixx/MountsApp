@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mounts/Pages/Widgets/widgets.dart';
+import 'package:mounts/Pages/Widgets/app_bottom_bar.dart';
+import 'package:mounts/Pages/Widgets/app_category_list.dart';
+import 'package:mounts/Pages/Widgets/app_header.dart';
+import 'package:mounts/Pages/Widgets/app_mounts_list.dart';
+import 'package:mounts/Pages/Widgets/app_search.dart';
 import 'package:mounts/utility/constants.dart' as constants;
 
 class MountsApp extends StatelessWidget {
@@ -8,25 +12,8 @@ class MountsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Center(
-          child: Icon(Icons.terrain, color: constants.mainColor, size: 40,),
-        ),
-        actions: [
-          SizedBox(width: 40, height: 40)
-        ],
-        iconTheme: IconThemeData(color: constants.mainColor),
-      ),
-      drawer: Drawer(
-        child: Container(
-          padding: EdgeInsets.all(30),
-          color: constants.mainColor,
-          alignment: Alignment.bottomLeft,
-          child: Icon(Icons.terrain, color: Colors.white, size: 80),
-        ),
-      ),
+      appBar: constants.appBar,
+      drawer: constants.drawer,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

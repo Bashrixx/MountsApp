@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mounts/Pages/Widgets/widgets.dart';
+import 'package:mounts/Pages/Widgets/details_bottom_actions.dart';
+import 'package:mounts/Pages/Widgets/details_rating_bar.dart';
 import 'package:mounts/data/models/mount.dart';
 
 class DetailsPage extends StatelessWidget {

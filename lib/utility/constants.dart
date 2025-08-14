@@ -5,6 +5,23 @@ import 'package:mounts/data/models/mount.dart';
 
 final Color mainColor = Color(0xFFFF5656);
 
+AppBar appBar = AppBar(
+  backgroundColor: Colors.transparent,
+  elevation: 0,
+  title: Center(child: Icon(Icons.terrain, color: mainColor, size: 40)),
+  actions: [SizedBox(width: 40, height: 40)],
+  iconTheme: IconThemeData(color: mainColor),
+);
+
+Drawer drawer = Drawer(
+  child: Container(
+    padding: EdgeInsets.all(30),
+    color: mainColor,
+    alignment: Alignment.bottomLeft,
+    child: Icon(Icons.terrain, color: Colors.white, size: 80),
+  ),
+);
+
 final List<CategoryModel> categories = [
   CategoryModel(category: 'Mountain', icon: Icons.terrain),
   CategoryModel(category: 'Forest', icon: Icons.park),
