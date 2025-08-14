@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mounts/Pages/Details/details.dart';
-import 'package:mounts/Pages/Splash/splash.dart';
 import 'package:mounts/data/models/app_bottom_bar.dart';
 import 'package:mounts/data/models/category.dart';
 import 'package:mounts/data/models/mount.dart';
